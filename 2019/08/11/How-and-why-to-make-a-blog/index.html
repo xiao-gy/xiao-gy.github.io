@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <link rel="icon" href="/img/avatar/logo.png">
+    <meta charset="utf-8">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5673866618531609",
+        enable_page_level_ads: true
+        });
+    </script>
+    
+    <!-- 引入Live2D -->
+    <link rel="stylesheet" type="text/css" href="https://xiao-gy.github.io/assets/waifu.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          如何使用 Gitee or GitHub 搭建hexo个人博客 - xiao-gy&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="https://hexo-github.xiao-gy.tk/2019/08/11/How-and-why-to-make-a-blog/">
+
+    <!-- Bootstrap Core CSS -->
+
+   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+	<link rel="stylesheet" href="/css/w3.css">
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- not work in footer :(-->
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+
+<!-- 引入Dao Voice -->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/c9e8a2c3.js","daovoice")</script>
+
+</head>
+
+<!-- 引入Live2D -->
+<link rel="stylesheet" type="text/css" href="https://hexo-github.xiao-gy.tk/assets/waifu.css">
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<link rel="icon" href="/img/avatar/logo.png">
+<style type="text/css">
+    header.intro-header{
+    }
+   .post-heading{
+    padding:20px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+
+</style>
+
+<header id="headerid" class="w3-indigo intro-header" style="position:relative;">
+    <!-- Signature -->
+
+        <div class="container">
+            <div class=" row" >
+			
+			<canvas id="particles-js-canvas" style="position:absolute;z-index:1;top:0px;left:0px;" width="100%" height="50%"></canvas>
+			
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
+                
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/技术" title="技术">技术</a>
+                            
+                              <a class="tag" href="/tags/博客" title="博客">博客</a>
+                            
+                        </div>
+                        <h1>如何使用 Gitee or GitHub 搭建hexo个人博客</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xiao-gy on
+                            2019-08-11
+                        </span>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+</header>
+
+
+<!-- 引入Live2D -->
+<link rel="stylesheet" type="text/css" href="https://hexo-github.xiao-gy.tk/assets/waifu.css"/>
+
+<!-- 引入Dao Voice -->
+<script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/c9e8a2c3.js","daovoice")</script>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">xiao-gy&#39;s blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a  href="/">主页</a>
+                    </li>
+		    
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="导语：为什么要有一个博客？"><a href="#导语：为什么要有一个博客？" class="headerlink" title="导语：为什么要有一个博客？"></a>导语：为什么要有一个博客？</h2><p>这个疑问，相信许多人都会有，为什么你需要一个博客，对于博主本人的话，理由有二，也许可以让你明白这个问题。</p>
+<h4 id="1、可以记录你的日常生活"><a href="#1、可以记录你的日常生活" class="headerlink" title="1、可以记录你的日常生活"></a>1、可以记录你的日常生活</h4><p>关于这一点的话，我之前有写过一篇游记，这个的话，就是记录生活的一个方面，我去过这个地方，我记录下我的想法，在之后看到就会想起来：啊，我去过这个地方，这个地方怎样怎样……你在那里干了什么，有什么令你想吐槽的事情等等，你想起来可能会笑得像个猪头，也不失为是种interesting的操作嘛。</p>
+<h4 id="2、记录你的各种瞎搞过程"><a href="#2、记录你的各种瞎搞过程" class="headerlink" title="2、记录你的各种瞎搞过程"></a>2、记录你的各种瞎搞过程</h4><p>总所周知，人是有求知欲的，一但你对一件东西产生兴趣，你就会去弄好它。在弄好一件东西后顺手做个笔记，这样的话，在自己下一次搞事的时候便能起到一定的作用。</p>
+<p>或许你会问，我第一次会了之后不是就会了吗？记录了又有什么用。</p>
+<p>其实非也，有时一些小小的细节是很容易被忽视的，也许你第一次忽视了，找了好久，终于找到了。第二次你就不一定会记得，这时候如果有笔记的话，当时的记录在现在看来会更加清楚，这样子的话，在之后干同一件事情的话会起到很大的作用。</p>
+<p>其次，写博客就是为了给别人看的。有时候写写教程的话，有时候可以帮助到需要的人，岂不美哉！</p>
+<h2 id="当然，上面那些都不是重点，重点是How，怎样搭建个人博客"><a href="#当然，上面那些都不是重点，重点是How，怎样搭建个人博客" class="headerlink" title="当然，上面那些都不是重点，重点是How，怎样搭建个人博客"></a>当然，上面那些都不是重点，重点是How，怎样搭建个人博客</h2><h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ol>
+<li><p>下载并安装git和nodejs，这些一般网上都会有的，如果git找不到，可以在网页版的腾讯软件管家里找哦</p>
+</li>
+<li><p>准备一个文件夹，文件夹建议可以命名为”blog”或”hexo”，用于存放博客的内容</p>
+</li>
+<li><p>去Gitee 或 GitHub上注册一个账号，请记住，账号的名字是有用的，最后的访问域名就是 用户名+Gitee/Github.io (当然了，如果有自己的域名就不需要考虑用户名的问题了，但请优先考虑Github，因为它可以绑定域名(可以去注册.tk/.cf之类的免费域名))</p>
+</li>
+<li><p>有个能万用的编辑器，如果没有，可以考虑用Atom或VScode。如果不会安装或者配置Atom的，可以等我之后的文章，或者直接用右下角的聊天告诉我你的QQ，我会进行简易的协助</p>
+</li>
+<li><p>熟悉ctrl，win的常用快捷键，不是必须品，但是熟悉更好</p>
+</li>
+</ol>
+<h4 id="准备工作就是这样的"><a href="#准备工作就是这样的" class="headerlink" title="准备工作就是这样的"></a>准备工作就是这样的</h4><h3 id="二、开始进行前期工作"><a href="#二、开始进行前期工作" class="headerlink" title="二、开始进行前期工作"></a>二、开始进行前期工作</h3><p>为方便说明，本文默认你的博客建立在D:/blog</p>
+<ol>
+<li>先安装hexo-cli，按下win+R调出运行，输入cmd，在出来的窗口输入以下内容</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安装hexo博客核心文件</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init d:/blog</span><br><span class="line"><span class="built_in">cd</span> d:/blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>现在就能在D:/blog下看到hexo的关键文件了</p>
+<p>简单介绍一下几个文件(夹)</p>
+<p>scaffolds——<del>不知道有什么用</del>，存着一些类似模板的东西</p>
+<p>source——用来存放内容，如果直接在里面放东西，在构建完之后会出现在网站的根目录下，其中的_posts用来存放写好的文章，记得要是Markdown语言！！！即文件为.md</p>
+<p>语法详见 <a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">这里</a></p>
+<p>此外，在文章前面还要加上格式</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于这个新博客 #标题</span><br><span class="line">date: 2019-08-24 15:38 #时间，格式为YYYY-MM-DD xx:xx（具体时间可以省略）</span><br><span class="line">categories: "杂谈" #分类</span><br><span class="line">tags:   #标签(可以多个)</span><br><span class="line"><span class="bullet">    - </span>日常</span><br><span class="line"><span class="bullet">    - </span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>theme用来存放主题</p>
+<p>_config.yml是hexo的配置文件(注意，是博客的，不是主题的)</p>
+<h4 id="了解了以上这些，你就可以在D-blog右键，选择”Git-Bash-Here”，执行以下命令"><a href="#了解了以上这些，你就可以在D-blog右键，选择”Git-Bash-Here”，执行以下命令" class="headerlink" title="了解了以上这些，你就可以在D:/blog右键，选择”Git Bash Here”，执行以下命令"></a>了解了以上这些，你就可以在D:/blog右键，选择”Git Bash Here”，执行以下命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g <span class="comment"># 作用是构建hexo的静态文件</span></span><br><span class="line">hexo s <span class="comment"># 作用是开启hexo的服务端，端口默认4000，可以通过http://127.0.0.1:4000 访问</span></span><br></pre></td></tr></table></figure>
+
+<p>如果不报错的话，目录应该会像这样</p>
+<p><img src="https://s2.ax1x.com/2019/08/28/mHPBXn.png" alt></p>
+<p>可能文件会少几个，但没什么问题</p>
+<p>现在我们打开<a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a>已经可以看到一篇内置的blog了。</p>
+<p>目前我安装所用的本地环境如下：(可以通过hexo -v查看)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">hexo: 3.9.0</span><br><span class="line">hexo-cli: 2.0.0</span><br><span class="line">os: Windows_NT 6.3.9600 win32 x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.16.0</span><br><span class="line">v8: 6.8.275.32-node.52</span><br><span class="line">uv: 1.28.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.34.0</span><br><span class="line">napi: 4</span><br><span class="line">openssl: 1.1.1b</span><br><span class="line">icu: 64.2</span><br><span class="line">unicode: 12.1</span><br><span class="line">cldr: 35.1</span><br><span class="line">tz: 2019a</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、博客的美化"><a href="#二、博客的美化" class="headerlink" title="二、博客的美化"></a>二、博客的美化</h3><p>以下文章以博主的魔改主题<a href="https://gitee.com/haotong666/hexo-theme-Eternal-night" target="_blank" rel="noopener">Eternal night</a>进行演示(欢迎fork以及starts)</p>
+<h4 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> d:/blog/themes</span><br><span class="line">hexo clean</span><br><span class="line">git <span class="built_in">clone</span> https://gitee.com/haotong666/hexo-theme-Eternal-night.git</span><br></pre></td></tr></table></figure>
+
+<h4 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h4><p>修改Hexo目录下的_config.yml配置文件中的theme属性，将其设置为Eternal-night。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">Eternal-night</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> d:/blog/themes</span><br><span class="line">git pull</span><br><span class="line">hexo g <span class="comment"># 生成</span></span><br><span class="line">hexo s <span class="comment"># 启动本地web服务器</span></span><br></pre></td></tr></table></figure>
+
+<p>现在打开<a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a>，会看到我们已经应用了一个新的主题。</p>
+<h1 id="这样，一个本地的博客就搭建好了，如何将其部署到Github-page等下次更新吧-其实是在摸鱼"><a href="#这样，一个本地的博客就搭建好了，如何将其部署到Github-page等下次更新吧-其实是在摸鱼" class="headerlink" title="这样，一个本地的博客就搭建好了，如何将其部署到Github page等下次更新吧(其实是在摸鱼)"></a>这样，一个本地的博客就搭建好了，如何将其部署到Github page等下次更新吧(其实是在摸鱼)</h1>
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/08/24/About-this-new-blog/" data-toggle="tooltip" data-placement="top" title="关于这个新博客">&larr; 上一篇</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2019/07/13/Visiting-Jizhong/" data-toggle="tooltip" data-placement="top" title="纪中游记——记暑假中山纪念中学的夏令营">下一篇 &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+				<!-- Valine start -->
+					<div id="vcomments"></div>
+					<script>
+						new Valine({
+							el: '#vcomments',
+							appId: 'iweCSFqhi6xCzaKqJEcRltvV-gzGzoHsz',
+							appKey: 'iPKn6nFSdA2pJz0S9uWNDl2T'
+						})
+					</script>
+				
+            </div>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签云</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/技术" title="技术">技术</a>
+                        
+                          <a class="tag" href="/tags/博客" title="博客">博客</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.xiao-gy.tk" target="_blank">xiao-gy&#39;s blog</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/xiao-gy">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+
+                </ul>
+
+
+                <!-- 网站运行时间的设置 -->
+                <p class="copyright text-muted">
+                    <span id="timeDate">载入天数...</span>
+                    <span id="times">载入时分秒...</span>
+                    <script>
+                        var now = new Date();
+
+                        function createtime() {
+                            var grt = new Date("04/30/2019 00:00:00"); //此处修改你的建站时间或者网站上线时间
+                            now.setTime(now.getTime() + 250);
+                            days = (now - grt) / 1000 / 60 / 60 / 24;
+                            dnum = Math.floor(days);
+                            hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                            hnum = Math.floor(hours);
+                            if (String(hnum).length == 1) {
+                                hnum = "0" + hnum;
+                            }
+                            minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                            mnum = Math.floor(minutes);
+                            if (String(mnum).length == 1) {
+                                mnum = "0" + mnum;
+                            }
+                            seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                            snum = Math.round(seconds);
+                            if (String(snum).length == 1) {
+                                snum = "0" + snum;
+                            }
+                            document.getElementById("timeDate").innerHTML = "站长已安全摸鱼 " + dnum + " 天 ";
+                            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+                        }
+                        setInterval("createtime()", 250);
+                    </script>
+
+                    <br>
+                    Copyright &copy; xiao-gy 2019
+                    <br>
+                    Powered by <a href="http://www.hexo.io">Hexo</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    Theme by <a href="https://github.com/kinggozhang/hexo-theme-ace">ACE</a>
+                    
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    Modify by <a href="https://gitee.com/haotong666/hexo-theme-Eternal-night">Eternal night</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<script src="/js/particles.js"></script>
+<script src="/js/particles_config.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document,
+            t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://hexo-github.xiao-gy.tk/2019/08/11/How-and-why-to-make-a-blog/index.html/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script>
+    if (!AV.applicationId) {
+        AV.init({
+            appId: 'iweCSFqhi6xCzaKqJEcRltvV-gzGzoHsz',
+            appKey: 'iPKn6nFSdA2pJz0S9uWNDl2T'
+        });
+    }
+
+    function createNewCounter() {
+        // 声明一个 Counter 类型
+        var Counter = AV.Object.extend('Counter');
+        // 新建一个 Counter 对象
+        var counter = new Counter();
+        console.log(document.URL);
+        counter.set('title', document.URL);
+        counter.set('counter', 0);
+        counter.save().then(function (counter) {
+            // 成功保存之后，执行其他逻辑.
+            console.log('New object created with objectId: ' + counter.id);
+        }, function (error) {
+            // 异常处理
+            console.error('Failed to create new object, with error message: ' + error.message);
+        });
+    }
+
+    function showPageView() {
+        var query = new AV.Query('Counter');
+        query.equalTo('title', document.URL);
+        query.find().then(function (results) {
+            if (results.length > 0) {
+                var cnt = results[0].get('counter');
+                results[0].increment('counter');
+                results[0].save().then(function (counter) { });
+                document.getElementById('leancounter').innerHTML = '' + (cnt + 1);
+            } else {
+                createNewCounter();
+                document.getElementById('leancounter').innerHTML = 1;
+            }
+        }, function (error) {
+
+            console.error('Failed to find object, with error message: ' + error.message);
+        });
+
+    }
+    showPageView();
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-139879745-1';
+    var _gaDomain = 'https://www.googletagmanager.com/gtag/js?id=UA-139879745-1';
+
+    // Originial
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Dao Voice -->
+
+<script>
+    daovoice('init', {
+      app_id: "c9e8a2c3",
+    });
+    daovoice('update');
+</script>
+
+
+<!--Live2D选项-->
+
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+    
+<script src="https://hexo-github.xiao-gy.tk/assets/waifu-tips.js"></script>
+<script src="https://hexo-github.xiao-gy.tk/assets/live2d.js"></script>
+<script type="text/javascript">initModel("https://hexo-github.xiao-gy.tk/assets/")</script>
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://hexo-github.xiao-gy.tk/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
