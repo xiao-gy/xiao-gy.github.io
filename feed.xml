@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://blog.xiao-gy.tk/"/>
-  <updated>2019-10-03T06:45:52.698Z</updated>
+  <updated>2020-01-24T13:23:57.437Z</updated>
   <id>https://blog.xiao-gy.tk/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>福州行记</title>
+    <link href="https://blog.xiao-gy.tk/2020/01/24/Visiting-Fuzhou/"/>
+    <id>https://blog.xiao-gy.tk/2020/01/24/Visiting-Fuzhou/</id>
+    <published>2020-01-23T16:00:00.000Z</published>
+    <updated>2020-01-24T13:23:57.437Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;如题&quot;&gt;&lt;a href=&quot;#如题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="日常" scheme="https://blog.xiao-gy.tk/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+      <category term="日常" scheme="https://blog.xiao-gy.tk/NaN"/>
+    
+  </entry>
   
   <entry>
     <title>关于这个新博客</title>
@@ -69,32 +95,6 @@
       <category term="技术" scheme="https://blog.xiao-gy.tk/NaN"/>
     
       <category term="博客" scheme="https://blog.xiao-gy.tk/NaN"/>
-    
-  </entry>
-  
-  <entry>
-    <title>福州行记</title>
-    <link href="https://blog.xiao-gy.tk/2019/08/11/Visiting-Fuzhou/"/>
-    <id>https://blog.xiao-gy.tk/2019/08/11/Visiting-Fuzhou/</id>
-    <published>2019-08-10T16:00:00.000Z</published>
-    <updated>2020-01-24T13:19:02.008Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;如题&quot;&gt;&lt;a href=&quot;#如题&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="日常" scheme="https://blog.xiao-gy.tk/categories/%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="日常" scheme="https://blog.xiao-gy.tk/NaN"/>
     
   </entry>
   
