@@ -5,9 +5,9 @@
   
   <link href="/feed.xml" rel="self"/>
   
-  <link href="http://blog.xiao-gy.top/"/>
+  <link href="https://blog.xiao-gy.top/"/>
   <updated>2020-01-24T13:23:57.437Z</updated>
-  <id>http://blog.xiao-gy.top/</id>
+  <id>https://blog.xiao-gy.top/</id>
   
   <author>
     <name>xiao-gy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>福州行记</title>
-    <link href="http://blog.xiao-gy.top/2020/01/24/Visiting-Fuzhou/"/>
-    <id>http://blog.xiao-gy.top/2020/01/24/Visiting-Fuzhou/</id>
+    <link href="https://blog.xiao-gy.top/2020/01/24/Visiting-Fuzhou/"/>
+    <id>https://blog.xiao-gy.top/2020/01/24/Visiting-Fuzhou/</id>
     <published>2020-01-23T16:00:00.000Z</published>
     <updated>2020-01-24T13:23:57.437Z</updated>
     
@@ -35,17 +35,17 @@
     
     </summary>
     
-      <category term="日常" scheme="http://blog.xiao-gy.top/categories/%E6%97%A5%E5%B8%B8/"/>
+      <category term="日常" scheme="https://blog.xiao-gy.top/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
-      <category term="日常" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
   <entry>
     <title>关于这个新博客</title>
-    <link href="http://blog.xiao-gy.top/2019/08/24/About-this-new-blog/"/>
-    <id>http://blog.xiao-gy.top/2019/08/24/About-this-new-blog/</id>
+    <link href="https://blog.xiao-gy.top/2019/08/24/About-this-new-blog/"/>
+    <id>https://blog.xiao-gy.top/2019/08/24/About-this-new-blog/</id>
     <published>2019-08-24T07:38:00.000Z</published>
     <updated>2020-02-04T11:19:38.497Z</updated>
     
@@ -63,17 +63,17 @@
     
     </summary>
     
-      <category term="杂谈" scheme="http://blog.xiao-gy.top/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://blog.xiao-gy.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="日常" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
   <entry>
     <title>如何使用 Gitee or GitHub 搭建hexo个人博客</title>
-    <link href="http://blog.xiao-gy.top/2019/08/11/How-and-why-to-make-a-blog/"/>
-    <id>http://blog.xiao-gy.top/2019/08/11/How-and-why-to-make-a-blog/</id>
+    <link href="https://blog.xiao-gy.top/2019/08/11/How-and-why-to-make-a-blog/"/>
+    <id>https://blog.xiao-gy.top/2019/08/11/How-and-why-to-make-a-blog/</id>
     <published>2019-08-10T16:00:00.000Z</published>
     <updated>2019-09-07T10:11:07.865Z</updated>
     
@@ -89,19 +89,19 @@
     
     </summary>
     
-      <category term="技术向" scheme="http://blog.xiao-gy.top/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+      <category term="技术向" scheme="https://blog.xiao-gy.top/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
     
     
-      <category term="技术" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="技术" scheme="https://blog.xiao-gy.top/NaN"/>
     
-      <category term="博客" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="博客" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
   <entry>
     <title>纪中游记——记暑假中山纪念中学的夏令营</title>
-    <link href="http://blog.xiao-gy.top/2019/07/13/Visiting-Jizhong/"/>
-    <id>http://blog.xiao-gy.top/2019/07/13/Visiting-Jizhong/</id>
+    <link href="https://blog.xiao-gy.top/2019/07/13/Visiting-Jizhong/"/>
+    <id>https://blog.xiao-gy.top/2019/07/13/Visiting-Jizhong/</id>
     <published>2019-07-13T12:57:17.000Z</published>
     <updated>2020-02-04T11:11:49.780Z</updated>
     
@@ -117,19 +117,19 @@
     
     </summary>
     
-      <category term="杂谈" scheme="http://blog.xiao-gy.top/categories/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://blog.xiao-gy.top/categories/%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="日常" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
     
-      <category term="游记" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="游记" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
   <entry>
     <title>9102年了如何科学自强的学习</title>
-    <link href="http://blog.xiao-gy.top/2019/05/25/How-to-FQ/"/>
-    <id>http://blog.xiao-gy.top/2019/05/25/How-to-FQ/</id>
+    <link href="https://blog.xiao-gy.top/2019/05/25/How-to-FQ/"/>
+    <id>https://blog.xiao-gy.top/2019/05/25/How-to-FQ/</id>
     <published>2019-05-24T16:00:00.000Z</published>
     <updated>2019-08-24T07:25:51.051Z</updated>
     
@@ -145,17 +145,17 @@
     
     </summary>
     
-      <category term="技术向" scheme="http://blog.xiao-gy.top/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+      <category term="技术向" scheme="https://blog.xiao-gy.top/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
     
     
-      <category term="技术" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="技术" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
   <entry>
     <title>各种常用资源网站and工具合集</title>
-    <link href="http://blog.xiao-gy.top/2019/05/08/Some-good-websides/"/>
-    <id>http://blog.xiao-gy.top/2019/05/08/Some-good-websides/</id>
+    <link href="https://blog.xiao-gy.top/2019/05/08/Some-good-websides/"/>
+    <id>https://blog.xiao-gy.top/2019/05/08/Some-good-websides/</id>
     <published>2019-05-07T16:00:00.000Z</published>
     <updated>2019-08-02T13:18:26.074Z</updated>
     
@@ -172,12 +172,12 @@
     
     </summary>
     
-      <category term="资源" scheme="http://blog.xiao-gy.top/categories/%E8%B5%84%E6%BA%90/"/>
+      <category term="资源" scheme="https://blog.xiao-gy.top/categories/%E8%B5%84%E6%BA%90/"/>
     
     
-      <category term="资源" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="资源" scheme="https://blog.xiao-gy.top/NaN"/>
     
-      <category term="分享" scheme="http://blog.xiao-gy.top/NaN"/>
+      <category term="分享" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
