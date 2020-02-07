@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://blog.xiao-gy.top/"/>
-  <updated>2020-02-07T02:59:08.225Z</updated>
+  <updated>2020-02-07T05:24:29.312Z</updated>
   <id>https://blog.xiao-gy.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.xiao-gy.top/2020/02/07/Hello-world/"/>
     <id>https://blog.xiao-gy.top/2020/02/07/Hello-world/</id>
     <published>2020-02-06T16:00:00.000Z</published>
-    <updated>2020-02-07T02:59:08.225Z</updated>
+    <updated>2020-02-07T05:24:29.312Z</updated>
     
     <summary type="html">
     
@@ -148,9 +148,9 @@
       <category term="技术向" scheme="https://blog.xiao-gy.top/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
     
     
-      <category term="博客" scheme="https://blog.xiao-gy.top/NaN"/>
-    
       <category term="技术" scheme="https://blog.xiao-gy.top/NaN"/>
+    
+      <category term="博客" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   
