@@ -27,11 +27,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-            xiao-gy&#39;s blog
+          在树莓派3/4上安装Windows 10 on ARM系统 - xiao-gy&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://blog.xiao-gy.top/categories/日常/">
+    <link rel="canonical" href="https://blog.xiao-gy.top/2020/02/10/win10-arm-on-pi4/">
 
     <!-- Bootstrap Core CSS -->
 
@@ -142,13 +142,21 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading"  style="padding:40px">
-                        <h1>xiao-gy&#39;s blog</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading"></span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/树莓派" title="树莓派">树莓派</a>
+                            
+                              <a class="tag" href="/tags/转载" title="转载">转载</a>
+                            
+                        </div>
+                        <h1>在树莓派3/4上安装Windows 10 on ARM系统</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xiao-gy on
+                            2020-02-10
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -232,369 +240,173 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="本文转自-cnBeta，如有版权问题请在评论区指出，博主会立即处理233"><a href="#本文转自-cnBeta，如有版权问题请在评论区指出，博主会立即处理233" class="headerlink" title="本文转自 cnBeta，如有版权问题请在评论区指出，博主会立即处理233"></a>本文转自 cnBeta，如有版权问题请在评论区指出，博主会立即处理233</h2><p><a href="https://www.cnbeta.com/articles/tech/941377.htm" target="_blank" rel="noopener">原文链接</a></p>
+<p><strong>继2019年上半年成功在树莓派3上运行之后，近日又有开发者在树莓派4上安装了针对ARM优化的Windows 10版本。</strong> 树莓派3和树莓派4官方支持Windows 10的IoT Core版本，不过该版本和在台式机上运行的常规版本有所不同，主要是针对低功耗计算机的简化版本。</p>
+<p><strong>访问:</strong></p>
+<p><a href="https://microsoft.pvxt.net/x9Vg1" target="_blank" rel="noopener">微软中国官方商城 - Windows</a></p>
+<p><a href="https://static.cnbetacdn.com/article/2020/0210/ee58280042bba43.jpg" target="_blank" rel="noopener"><img src="https://static.cnbetacdn.com/thumb/article/2020/0210/ee58280042bba43.jpg" alt></a></p>
+<p><a href="https://static.cnbetacdn.com/article/2020/0210/4cf7765ec048b08.jpg" target="_blank" rel="noopener"><img src="https://static.cnbetacdn.com/thumb/article/2020/0210/4cf7765ec048b08.jpg" alt></a></p>
+<p>例如，<a href="https://microsoft.pvxt.net/x9Vg1" target="_blank" rel="noopener">Windows</a> 10 IoT Core版本不允许运行传统Win32应用，也无法启动到桌面。IoT Core版本单次仅允许运行1个UWP应用，其目的是为了运行专为小型计算机主板设计的小型应用程序。</p>
+<p>幸运的是，根据下面这个步骤能够在树莓派3 B+和树莓派4B上使用非官方支持的技术预览版来使用Windows 10 on ARM。与IoT Core版本不同，Windows 10 ARM是操作系统针对ARM的操作系统，它带有传统的桌面，并且通过仿真支持Win32应用程序。</p>
+<p>开发人员Marcin设法使Raspberry Pi 4 Model B上的Windows 10 ARM上运行，并且他还发布了详细的指南：</p>
+<blockquote>
+<p>1.从<a href="https://github.com/pftf/RPi4/releases" target="_blank" rel="noopener">此处</a>下载UEFI固件，并将其解压缩到FAT32格式的MicroSD卡上。</p>
+<p>2.从<a href="https://uup.rg-adguard.net/" target="_blank" rel="noopener">此处</a>下载已经过测试优化的Windows 10 ARM64 Build 17134，不过任何通过OOBE的较新版本理论上也兼容。</p>
+<p>3. 从<a href="https://uupdump.ml/" target="_blank" rel="noopener">此处</a>下载ISO编译器。根据开发人员的说法，这将创建ISO文件，但您仍然需要来自sources文件夹的install.wim。</p>
+<p>4.从<a href="https://worproject.ml/" target="_blank" rel="noopener">此处</a>下载“ Raspberry上的Windows”。这会将Build 17134或更高版本安装到USB存储设备中，并且需要选择GPT。</p>
+</blockquote>
+<p>下载完这些文件后，您必须运行命令提示符并按照<a href="https://pastebin.com/3ZkW0Hrz" target="_blank" rel="noopener">此处</a>概述的步骤进行操作。</p>
+<p>值得注意的是，Raspberry Pi 4的某些功能可能不适用于Windows 10 on ARM。例如，您只能使用Type-C USB端口进行充电和OTG。 Windows 10 ARM还将RAM限制为仅1GB，并且Broadcom auxspi控制器驱动程序无法正常工作。</p>
+<h2 id="以上是原文，以下则是博主的一些看法"><a href="#以上是原文，以下则是博主的一些看法" class="headerlink" title="以上是原文，以下则是博主的一些看法"></a>以上是原文，以下则是博主的一些看法</h2><p>树莓派4b发布至今，作为一位刚刚入手的树莓派4b的用户，在前期发现树莓派的系统资源挺匮乏的，毕竟各大系统还没有适配树莓派，于是前期我一边用着树莓派的官方系统，一边在寻找新的系统，从最早宣布(?)的国内树莓派爱好者基地，再到Arch linux，再到第三方的安卓:Lineage OS的安卓Pie，树莓派4b的用户终于遇到了官方的win10 on arm。</p>
+<p>关于我买树莓派的动机等，博主过几天再写一篇文章记录一下233，反正原因之一就是想跑一下win10。</p>
+<p>安卓(第三方)的支持令我欣喜若狂，而且当时在国内还没有类似文章，我稳健了上了一下google之后才找到的文章，而且因为是国外的资源，系统的下载花了我3个小时。</p>
+<p>如今win10的支持，我的欣喜不言而喻。</p>
+<p>现在安卓装好了，明天实测一下，再装win10.</p>
 
                 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
 
-             <!-- 归档列表 -->
-
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-10
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/10/win10-arm-on-pi4/" style="color: #0085a1">
-                        <span>
-                            在树莓派3/4上安装Windows 10 on ARM系统
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/07/Why-to-learn/" style="color: #0085a1">
-                        <span>
-                            就我迷茫的学习生活作一总结
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/07/Hello-world/" style="color: #0085a1">
-                        <span>
-                            Hello world!
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    01-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/01/24/Visiting-Fuzhou/" style="color: #0085a1">
-                        <span>
-                            福州行记
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/02/07/Hello-world/" data-toggle="tooltip" data-placement="top" title="Hello world!">下一篇 &rarr;</a>
+                        </li>
+                    
                 </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+				<!-- Valine start -->
+					<div id="vcomments"></div>
+					<script>
+						new Valine({
+							el: '#vcomments',
+							appId: 'iweCSFqhi6xCzaKqJEcRltvV-gzGzoHsz',
+							appKey: 'iPKn6nFSdA2pJz0S9uWNDl2T'
+						})
+					</script>
+				
             </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/08/24/About-this-new-blog/" style="color: #0085a1">
-                        <span>
-                            关于这个新博客
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-11
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/08/11/How-and-why-to-make-a-blog/" style="color: #0085a1">
-                        <span>
-                            如何使用 Gitee or GitHub 搭建hexo个人博客
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签云</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/树莓派" title="树莓派">树莓派</a>
+                        
+                          <a class="tag" href="/tags/转载" title="转载">转载</a>
+                        
+                    </div>
+                </section>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-13
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/07/13/Visiting-Jizhong/" style="color: #0085a1">
-                        <span>
-                            纪中游记——记暑假中山纪念中学的夏令营
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+
+                <!-- Friends Blog -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-25
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/05/25/How-to-FQ/" style="color: #0085a1">
-                        <span>
-                            9102年了如何科学自强的学习
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-08
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/05/08/Some-good-websides/" style="color: #0085a1">
-                        <span>
-                            各种常用资源网站and工具合集
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://www.zklcdc.top/" target="_blank">Harry-zklcdc&#39;s Blog</a></li>
+                    
                 </ul>
+                
             </div>
-            
-
-
         </div>
     </div>
-</div>
+</article>
 
 
 
-                <!-- 如果开启评论功能 -->
-                
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">标签云</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/博客" title="博客" rel="2">博客</a>
-            
-        
-            
-            <a href="/tags/日常" title="日常" rel="5">日常</a>
-            
-        
-            
-            <a href="/tags/技术" title="技术" rel="2">技术</a>
-            
-        
-            
-            <a href="/tags/游记" title="游记" rel="1">游记</a>
-            
-        
-            
-            <a href="/tags/树莓派" title="树莓派" rel="1">树莓派</a>
-            
-        
-            
-            <a href="/tags/转载" title="转载" rel="1">转载</a>
-            
-        
-            
-            <a href="/tags/资源" title="资源" rel="1">资源</a>
-            
-        
-            
-            <a href="/tags/分享" title="分享" rel="1">分享</a>
-            
-        
-    </div>
-</section>
 
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">关于</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/avatar/logo.png" />
-        
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        
-            <p>某不知名的中学生是也</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-                <li>
-                    <a href="/feed.xml">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/xiao-gy">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>最近发表</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2020/02/10/win10-arm-on-pi4/">在树莓派3/4上安装Windows 10 on ARM系统</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/07/Hello-world/">Hello world!</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/07/Why-to-learn/">就我迷茫的学习生活作一总结</a>
-        </li>
-      
-        <li>
-          <a href="/2020/01/24/Visiting-Fuzhou/">福州行记</a>
-        </li>
-      
-        <li>
-          <a href="/2019/08/24/About-this-new-blog/">关于这个新博客</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        
-    <h5>归档</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>友链</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://www.zklcdc.top/" target="_blank">Harry-zklcdc&#39;s Blog</a></li>
-    
-</ul>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-    <h5>分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术向/">技术向</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日常/">日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li></ul>
-    </div>
-
-        <hr>
-    
-</div>
-
-
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
@@ -751,7 +563,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("https://blog.xiao-gy.top/categories/日常/index.html/js/jquery.tagcloud.js", function () {
+        async("https://blog.xiao-gy.top/2020/02/10/win10-arm-on-pi4/index.html/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {
