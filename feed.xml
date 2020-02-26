@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>xiao-gy&#39;s blog</title>
   
-  
+  <subtitle>某不知名的中学生是也</subtitle>
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://blog.xiao-gy.top/"/>
-  <updated>2020-02-19T01:35:14.982Z</updated>
+  <updated>2020-02-26T11:44:59.925Z</updated>
   <id>https://blog.xiao-gy.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何搭建自己的MC服务器</title>
+    <link href="https://blog.xiao-gy.top/2020/02/26/How-to-built-your-own-MC-Server/"/>
+    <id>https://blog.xiao-gy.top/2020/02/26/How-to-built-your-own-MC-Server/</id>
+    <published>2020-02-25T16:00:00.000Z</published>
+    <updated>2020-02-26T11:44:59.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;首先贴一下我服务器的状态图&quot;&gt;&lt;a href=&quot;#首先贴一下我服务器的状态图&quot; class=&quot;headerlink&quot; title=&quot;首先贴一下我服务器的状态图&quot;&gt;&lt;/a&gt;首先贴一下我服务器的状态图&lt;/h2&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="技术向" scheme="https://blog.xiao-gy.top/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    
+    
+      <category term="技术" scheme="https://blog.xiao-gy.top/NaN"/>
+    
+      <category term="MC" scheme="https://blog.xiao-gy.top/NaN"/>
+    
+  </entry>
   
   <entry>
     <title>在树莓派3/4上安装Windows 10 on ARM系统</title>
@@ -66,9 +94,9 @@
       <category term="博客" scheme="https://blog.xiao-gy.top/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
-    
       <category term="博客" scheme="https://blog.xiao-gy.top/NaN"/>
+    
+      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
     
   </entry>
   

@@ -27,11 +27,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-        xiao-gy&#39;s blog
+        如何搭建自己的MC服务器 - xiao-gy&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://blog.xiao-gy.top/categories/日常/">
+    <link rel="canonical" href="https://blog.xiao-gy.top/2020/02/26/How-to-built-your-own-MC-Server/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -150,13 +150,21 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading"  style="padding:40px">
-                        <h1>xiao-gy&#39;s blog</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">某不知名的中学生是也</span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/技术" title="技术">技术</a>
+                            
+                              <a class="tag" href="/tags/MC" title="MC">MC</a>
+                            
+                        </div>
+                        <h1>如何搭建自己的MC服务器</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xiao-gy on
+                            2020-02-26
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -240,397 +248,190 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="首先贴一下我服务器的状态图"><a href="#首先贴一下我服务器的状态图" class="headerlink" title="首先贴一下我服务器的状态图"></a>首先贴一下我服务器的状态图</h2><p><img src="https://tietu.mclists.cn/banner/219.139.77.115_25657.jpg" alt></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在经历了长得痛苦的假期之后，一个游戏 <del>渐渐的浮上了水面</del> ，再次引起了我的关注，于是我下载了一下，通过标题知道，我下载的游戏正是我的世界。</p>
+<p>可能有些杠精就要问了，你玩MC就好好玩，为什么一定要搭建服务器呢？</p>
+<p>答案很简单，1.7.X以上的版本局域网联机需要正版验证 <del>你看我这么穷像有的样子么</del> ，为了考虑到没有正版的同学，于是我萌生了搭建服务器的念头。</p>
+<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><p>刚开始，我盯上了我的树莓派，于是真的搞了一下，在<a href="https://www.natfrp.com/" target="_blank" rel="noopener">SAKURA FRP</a>的帮助下，我成功的开启了我的第一个服务器。</p>
+<p>但是由于家人的限制，我没办法将树莓派24h开机，而且还可能面临断电的危机 <del>我爸的手机要充电了，我家只有一条Type—C的充电线</del>，于是在开了3天之后，我放弃了嗷。</p>
+<p>接下来的选择就是vps了，于是我真的买了一个，这里推荐这个：<a href="http://www.dasyun.com/" target="_blank" rel="noopener">DasYun</a>，挺便宜的吧。一个月20元，2h2G，开放3个端口，挺好的。所以在众筹了7.5元之后，我以12.5的价格买下了服务器，然后就开始了当腐竹的30天。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>在拥有一台以Ubuntu为系统的vps之后，你需要做以下几件事：</p>
+<p>确定Java环境正常</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>如果输出的是版本号的话，那么就安装成功了嗷</p>
+<p>然后安装npm和nodejs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
+
+<p>如果成功的话，执行以下命令的话应该还有版本号的输出：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nodejs -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>然后clone一下面板的源码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitee.com/haotong666/MCSManager.git</span><br></pre></td></tr></table></figure>
+
+<p>然后编译源码,顺便运行一下面板</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> MCSManager</span><br><span class="line">npm i</span><br><span class="line">sudo npm start</span><br></pre></td></tr></table></figure>
+
+<p>如果没报错的话，打开http://[你的ip]:23333应该会出现这样的一个面板</p>
+<p><img src="https://xiao-gy-cdn.123yes.me/blog/img/How-to-built-your-own-MC-Server/1.png" alt></p>
+<p>然后你就用管理员账号登录一下，默认账号：#master，默认密码：123456</p>
+<p>然后你就进入面板了嗷，按进这个（请忽略我已经开的服务器）</p>
+<p><img src="https://xiao-gy-cdn.123yes.me/blog/img/How-to-built-your-own-MC-Server/2.png" alt></p>
+<p><img src="https://xiao-gy-cdn.123yes.me/blog/img/How-to-built-your-own-MC-Server/3.png" alt></p>
+<p>修改一下服务器的名字</p>
+<p><img src="https://xiao-gy-cdn.123yes.me/blog/img/How-to-built-your-own-MC-Server/4.png" alt></p>
+<p>在此处上传一下你的.jar的服务器端，或者之后再上传也没关系</p>
+<p><img src="https://xiao-gy-cdn.123yes.me/blog/img/How-to-built-your-own-MC-Server/5.png" alt></p>
+<p>这些一般不用改，直接过就好了</p>
+<p><img src="https://xiao-gy-cdn.123yes.me/blog/img/How-to-built-your-own-MC-Server/6.png" alt></p>
+<p>然后你就可以开启服务器了，如果报错的话，就去看看服务器目录下有没有一个 eula.txt，如果有就下载下来，把最后的flase改成true，上传上去，再次开启服务器，然后就开启了！</p>
+<p>你就可以下载对应的客户端，链接服务器了！</p>
+<p>就这样了，因为我懒得写了。</p>
 
                 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
 
-             <!-- 归档列表 -->
-
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-26
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/26/How-to-built-your-own-MC-Server/" style="color: #0085a1">
-                        <span>
-                            如何搭建自己的MC服务器
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-10
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/10/win10-arm-on-pi4/" style="color: #0085a1">
-                        <span>
-                            在树莓派3/4上安装Windows 10 on ARM系统
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/07/Why-to-learn/" style="color: #0085a1">
-                        <span>
-                            就我迷茫的学习生活作一总结
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/07/Hello-world/" style="color: #0085a1">
-                        <span>
-                            Hello world!
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    01-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/01/24/Visiting-Fuzhou/" style="color: #0085a1">
-                        <span>
-                            福州行记
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/02/10/win10-arm-on-pi4/" data-toggle="tooltip" data-placement="top" title="在树莓派3/4上安装Windows 10 on ARM系统">下一篇 &rarr;</a>
+                        </li>
+                    
                 </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+				<!-- Valine start -->
+					<div id="vcomments"></div>
+					<script>
+						new Valine({
+							el: '#vcomments',
+							appId: 'iweCSFqhi6xCzaKqJEcRltvV-gzGzoHsz',
+							appKey: 'iPKn6nFSdA2pJz0S9uWNDl2T'
+						})
+					</script>
+				
             </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/08/24/About-this-new-blog/" style="color: #0085a1">
-                        <span>
-                            关于这个新博客
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-11
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/08/11/How-and-why-to-make-a-blog/" style="color: #0085a1">
-                        <span>
-                            如何使用 Gitee or GitHub 搭建hexo个人博客
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签云</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/技术" title="技术">技术</a>
+                        
+                          <a class="tag" href="/tags/MC" title="MC">MC</a>
+                        
+                    </div>
+                </section>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-13
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/07/13/Visiting-Jizhong/" style="color: #0085a1">
-                        <span>
-                            纪中游记——记暑假中山纪念中学的夏令营
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+
+                <!-- Friends Blog -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-25
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/05/25/How-to-FQ/" style="color: #0085a1">
-                        <span>
-                            9102年了如何科学自强的学习
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-08
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/05/08/Some-good-websides/" style="color: #0085a1">
-                        <span>
-                            各种常用资源网站and工具合集
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://www.zklcdc.top/" target="_blank">Harry-zklcdc&#39;s Blog</a></li>
+                    
                 </ul>
+                
             </div>
-            
-
-
         </div>
     </div>
-</div>
+</article>
 
 
 
-                <!-- 如果开启评论功能 -->
-                
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">标签云</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/博客" title="博客" rel="2">博客</a>
-            
-        
-            
-            <a href="/tags/日常" title="日常" rel="5">日常</a>
-            
-        
-            
-            <a href="/tags/技术" title="技术" rel="3">技术</a>
-            
-        
-            
-            <a href="/tags/MC" title="MC" rel="1">MC</a>
-            
-        
-            
-            <a href="/tags/资源" title="资源" rel="1">资源</a>
-            
-        
-            
-            <a href="/tags/分享" title="分享" rel="1">分享</a>
-            
-        
-            
-            <a href="/tags/游记" title="游记" rel="1">游记</a>
-            
-        
-            
-            <a href="/tags/树莓派" title="树莓派" rel="1">树莓派</a>
-            
-        
-            
-            <a href="/tags/转载" title="转载" rel="1">转载</a>
-            
-        
-    </div>
-</section>
 
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">关于</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/avatar/logo.png" />
-        
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        
-            <p>某不知名的中学生是也</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-                <li>
-                    <a href="/feed.xml">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/xiao-gy">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/xiao-gy">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>最近发表</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2020/02/26/How-to-built-your-own-MC-Server/">如何搭建自己的MC服务器</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/10/win10-arm-on-pi4/">在树莓派3/4上安装Windows 10 on ARM系统</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/07/Hello-world/">Hello world!</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/07/Why-to-learn/">就我迷茫的学习生活作一总结</a>
-        </li>
-      
-        <li>
-          <a href="/2020/01/24/Visiting-Fuzhou/">福州行记</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        
-    <h5>归档</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>友链</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://www.zklcdc.top/" target="_blank">Harry-zklcdc&#39;s Blog</a></li>
-    
-</ul>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-    <h5>分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术向/">技术向</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日常/">日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li></ul>
-    </div>
-
-        <hr>
-    
-</div>
-
-
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
@@ -793,7 +594,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("https://blog.xiao-gy.top/categories/日常/index.html/js/jquery.tagcloud.js", function () {
+        async("https://blog.xiao-gy.top/2020/02/26/How-to-built-your-own-MC-Server/index.html/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {
