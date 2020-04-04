@@ -25,11 +25,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-        xiao-gy&#39;s blog
+        萌新也能看懂的黑苹果教程 - xiao-gy&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="https://blog.xiao-gy.top/categories/资源/">
+    <link rel="canonical" href="https://blog.xiao-gy.top/2020/04/04/How-to-install-black-apple/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -171,13 +171,23 @@
 			
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
                 
-				
-                    <div class="site-heading"  style="padding:40px">
-                        <h1>xiao-gy&#39;s blog</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">某不知名的中学生是也</span>
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/日常" title="日常">日常</a>
+                            
+                              <a class="tag" href="/tags/技术" title="技术">技术</a>
+                            
+                              <a class="tag" href="/tags/黑苹果" title="黑苹果">黑苹果</a>
+                            
+                        </div>
+                        <h1>萌新也能看懂的黑苹果教程</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by xiao-gy on
+                            2020-04-04
+                        </span>
                     </div>
-                
                 
                 </div>
             </div>
@@ -261,416 +271,195 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-                
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
+                <h2 id="这一切都要从一只蝙蝠说起"><a href="#这一切都要从一只蝙蝠说起" class="headerlink" title="这一切都要从一只蝙蝠说起"></a>这一切都要从一只蝙蝠说起</h2><h3 id="故事开始："><a href="#故事开始：" class="headerlink" title="故事开始："></a>故事开始：</h3><p>从前，有一个人，他真的很闲，喜欢玩电脑，喜欢乱搞，但是他乱搞的时间不多，直到一只蝙蝠的出现，改变了他的命运。</p>
+<h3 id="废话不多说，进入正题"><a href="#废话不多说，进入正题" class="headerlink" title="废话不多说，进入正题"></a>废话不多说，进入正题</h3><h2 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h2><ul>
+<li><p>一个黑苹果镜像，推荐去<a href="https://blog.daliansky.net/" target="_blank" rel="noopener">黑果小兵</a>那里找，最新的或者Mojave都可以</p>
+</li>
+<li><p>一个镜像烧写工具，推荐全平台通用的小白工具<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balena Etcher</a></p>
+</li>
+<li><p>一个分区工具，推荐<a href="http://www.diskgenius.cn/" target="_blank" rel="noopener">diskgenius</a></p>
+</li>
+<li><p>(非必须)一个<a href="http://bbs.pcbeta.com" target="_blank" rel="noopener">远景论坛</a>账号</p>
+</li>
+<li><p>一颗爱折腾的心</p>
+</li>
+<li><p>如果你下载的镜像有标注(双UEFI)的字样，那就可以省略，否则请准备一个U盘PE，推荐用<a href="http://www.wepe.com.cn/" target="_blank" rel="noopener">微PE工具箱</a>，请在安装前确定一下你的PE可以正常使用 <del>(鬼知道因为少了这一步我折腾了一天)</del></p>
+<p>以上就是需要准备的全部工具</p>
+</li>
+</ul>
+<h2 id="开始进行win下的操作"><a href="#开始进行win下的操作" class="headerlink" title="开始进行win下的操作"></a>开始进行win下的操作</h2><p>  1.打开你的分区工具，这里以<code>diskgenius</code>为例。先划出一块空间，这样你就得到了一块空白的空间，注意，这块空间少说要有50GB左右！</p>
+<p>  2.新建分区，右键那块空白的空间，选择新建分区，在格式里面找到APFS，按下确定，然后按下软件右上角的保存分区表来保存修改。</p>
+<p>  以上这几步因为简单，所以我就不加配图了 <del>(其实是因为我懒得去截图了)</del> ，不会的可以自己去百度diskgenius的使用方法</p>
+<p>  3.写入镜像，打开你的<code>balena Etcher</code>，你大概会看到三个按键(如图)，第一个选你下载的系统镜像，第二个选择你的U盘，然后按下最后的按键</p>
+<p>  <img src="https://imgsa.baidu.com/exp/pic/item/d048adde9c82d15857ff8c838f0a19d8bc3e4240.jpg" alt=""></p>
+<h1 id="Flash！"><a href="#Flash！" class="headerlink" title="Flash！"></a>Flash！</h1><p>  等待到出现如下界面就可以拔出U盘了</p>
+<p>  <img src="https://imgsa.baidu.com/exp/pic/item/55a628d12f2eb938acd350c1da628535e5dd6f03.jpg" alt=""></p>
+<p>  4.U盘启动电脑(如果启动失败的话，请自行百度 如何关闭安全启动 )</p>
+<h2 id="开始在mac安装盘下的操作"><a href="#开始在mac安装盘下的操作" class="headerlink" title="开始在mac安装盘下的操作"></a>开始在mac安装盘下的操作</h2><p>  首先是一些问题，如果下载的是<code>Catalina</code>版的镜像，在跑代码之前卡在一排加号<code>++++++++++++++++++++</code>的话，两个解决方法：</p>
+<pre><code>1.有自己加过内存条的尝试拔掉新加的内存条
+2.考虑使用Mojave的镜像(本人就是这样解决的233)</code></pre><p>  1.假定你成功进入了安装盘，首先进入磁盘工具，抹掉你要安装mac的磁盘，格式选择<code>APFS</code>。</p>
+<p>  这里有一个很玄学的操作，如果你无法抹掉你的那个硬盘的话，请在确保你的<code>EFI</code>启动分区大于200MB的情况下观赏博主的玄学解决法：</p>
+<pre><code>1.找一个U盘，在mac安装盘下抹掉，格式为`APFS`，如果可以的话进行下一步
+2.选择你要安装mac的盘，按下恢复，在源磁盘选择你的U盘，然后恢复。
+3.如果成功的话就正常安装，如果失败的话，尝试再次抹掉你你要安装mac的磁盘为`APFS`</code></pre><p>  2.如果你安装的是Mojave的话，请在安装之前先打开终端，输入以下命令</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data 0101000018</span><br></pre></td></tr></table></figure>
 
-             <!-- 归档列表 -->
+<p>  3.进入安装程序，同意所有的条款，在选择磁盘的界面选择你的事先抹掉的磁盘，接下来的操作都很人性化了</p>
+<h2 id="进行第二阶段的安装"><a href="#进行第二阶段的安装" class="headerlink" title="进行第二阶段的安装"></a>进行第二阶段的安装</h2><p>  在安装的过程中会重启，如果你错过了也没关系，在开机的时候进入Clover的界面，选择<code>install mac from [你的磁盘名]</code>，如果没有命名的话，磁盘名应该为未命名。</p>
+<p>  然后进入第二阶段之后就等待就好了</p>
+<h2 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h2><p>  排除那些被卡在五国图的情况，那么你应该进入系统了。</p>
+<p>  如果你被卡在五国图，那么请自己去远景论坛查找解决方法。</p>
+<p>  在开机之后，先测试一下你的WiFi、扬声器是否正常，如果不正常的话，进行驱动的修复。</p>
+<p>  首先是WiFi的修复，在win下右键此电脑(或其他什么名字) - 管理 - 设备管理器 - 网络设备(忘了叫什么) - 找到你的WiFi网卡型号 - 上github搜索 - 自己安装去</p>
+<p>  接着是显卡的修复，首先下载Clover的配置软件(在mac下运行)</p>
+<p>  链接: <a href="https://pan.baidu.com/s/1vu-RIW9H9Sk41tzKhl2-ZA" target="_blank" rel="noopener">https://pan.baidu.com/s/1vu-RIW9H9Sk41tzKhl2-ZA</a> 提取码: bj1m</p>
+<h1 id="然后我就摸鱼了"><a href="#然后我就摸鱼了" class="headerlink" title="然后我就摸鱼了"></a>然后我就摸鱼了</h1>
+                
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    04-04
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/04/04/How-to-install-black-apple/" style="color: #0085a1">
-                        <span>
-                            萌新也能看懂的黑苹果教程
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-26
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/26/How-to-built-your-own-MC-Server/" style="color: #0085a1">
-                        <span>
-                            如何搭建自己的MC服务器
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-10
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/10/win10-arm-on-pi4/" style="color: #0085a1">
-                        <span>
-                            在树莓派3/4上安装Windows 10 on ARM系统
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/07/Why-to-learn/" style="color: #0085a1">
-                        <span>
-                            就我迷茫的学习生活作一总结
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    02-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/02/07/Hello-world/" style="color: #0085a1">
-                        <span>
-                            Hello world!
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    01-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2020/01/24/Visiting-Fuzhou/" style="color: #0085a1">
-                        <span>
-                            福州行记
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/02/26/How-to-built-your-own-MC-Server/" data-toggle="tooltip" data-placement="top" title="如何搭建自己的MC服务器">下一篇 &rarr;</a>
+                        </li>
+                    
                 </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+				<!-- Valine start -->
+					<div id="vcomments"></div>
+					<script>
+						new Valine({
+							el: '#vcomments',
+							appId: 'iweCSFqhi6xCzaKqJEcRltvV-gzGzoHsz',
+							appKey: 'iPKn6nFSdA2pJz0S9uWNDl2T'
+						})
+					</script>
+				
             </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/08/24/About-this-new-blog/" style="color: #0085a1">
-                        <span>
-                            关于这个新博客
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-11
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/08/11/How-and-why-to-make-a-blog/" style="color: #0085a1">
-                        <span>
-                            如何使用 Gitee or GitHub 搭建hexo个人博客
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签云</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/日常" title="日常">日常</a>
+                        
+                          <a class="tag" href="/tags/技术" title="技术">技术</a>
+                        
+                          <a class="tag" href="/tags/黑苹果" title="黑苹果">黑苹果</a>
+                        
+                    </div>
+                </section>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-13
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/07/13/Visiting-Jizhong/" style="color: #0085a1">
-                        <span>
-                            纪中游记——记暑假中山纪念中学的夏令营
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+
+                <!-- Friends Blog -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-25
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/05/25/How-to-FQ/" style="color: #0085a1">
-                        <span>
-                            9102年了如何科学自强的学习
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-08
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/2019/05/08/Some-good-websides/" style="color: #0085a1">
-                        <span>
-                            各种常用资源网站and工具合集
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://www.zklcdc.top/" target="_blank">Harry-zklcdc&#39;s Blog</a></li>
+                    
                 </ul>
+                
             </div>
-            
-
-
         </div>
     </div>
-</div>
+</article>
 
 
 
-                <!-- 如果开启评论功能 -->
-                
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">标签云</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/日常" title="日常" rel="6">日常</a>
-            
-        
-            
-            <a href="/tags/技术" title="技术" rel="4">技术</a>
-            
-        
-            
-            <a href="/tags/博客" title="博客" rel="2">博客</a>
-            
-        
-            
-            <a href="/tags/MC" title="MC" rel="1">MC</a>
-            
-        
-            
-            <a href="/tags/游记" title="游记" rel="1">游记</a>
-            
-        
-            
-            <a href="/tags/资源" title="资源" rel="1">资源</a>
-            
-        
-            
-            <a href="/tags/分享" title="分享" rel="1">分享</a>
-            
-        
-            
-            <a href="/tags/树莓派" title="树莓派" rel="1">树莓派</a>
-            
-        
-            
-            <a href="/tags/转载" title="转载" rel="1">转载</a>
-            
-        
-            
-            <a href="/tags/黑苹果" title="黑苹果" rel="1">黑苹果</a>
-            
-        
-    </div>
-</section>
 
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">关于</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="https://xiao-gy-cdn.123yes.me/blog/theme/logo.png" />
-        
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        
-            <p>某不知名的中学生是也</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-                <li>
-                    <a href="/feed.xml">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/xiao-gy-54">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa  fa-stack-1x fa-inverse">知</i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/xiao-gy">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        
-  <h5>最近发表</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2020/04/04/How-to-install-black-apple/">萌新也能看懂的黑苹果教程</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/26/How-to-built-your-own-MC-Server/">如何搭建自己的MC服务器</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/10/win10-arm-on-pi4/">在树莓派3/4上安装Windows 10 on ARM系统</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/07/Hello-world/">Hello world!</a>
-        </li>
-      
-        <li>
-          <a href="/2020/02/07/Why-to-learn/">就我迷茫的学习生活作一总结</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-        
-    <h5>归档</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>友链</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://www.zklcdc.top/" target="_blank">Harry-zklcdc&#39;s Blog</a></li>
-    
-</ul>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-    <h5>分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%90%91/">技术向</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B5%84%E6%BA%90/">资源</a><span class="category-list-count">1</span></li></ul>
-    </div>
-
-        <hr>
-    
-</div>
-
-
-        
-    </div>
-</div>
 
 
     <!-- Footer -->
@@ -843,7 +632,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if ($('#tag_cloud').length !== 0) {
-        async("https://blog.xiao-gy.top/categories/%E8%B5%84%E6%BA%90/index.html/js/jquery.tagcloud.js", function () {
+        async("https://blog.xiao-gy.top/2020/04/04/How-to-install-black-apple/index.html/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {
