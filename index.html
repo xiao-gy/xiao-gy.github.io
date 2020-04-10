@@ -878,10 +878,19 @@
     <!-- Footer -->
     <!-- Footer -->
 <footer>
+    <!--QQ微信内置浏览器跳转-->
+    <script type="text/javascript">
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger\/[0-9]/i) || ua.match(/MQQBrowser\/[0-9]/i) || ua.match(/QQ\/[0-9]/i)) {
+            //window.location.href = 'https://zklcdc.gitee.io/urljump/URLJump.html?url=' + url;
+            window.location.href = "/Users/harry-zklcdc/Desktop/test/URLJump.html?url=" + url;
+        }
+    </script>
+
     <!--页脚图片选项-->
-        
-        <img id="footerimg" src="https://xiao-gy-cdn.123yes.me/blog/theme/footer.png" width=500% height=500% />
-        
+    
+    <img id="footerimg" src="https://xiao-gy-cdn.123yes.me/blog/theme/footer.png" width=500% height=500% />
+    
 
 
     <div class="container">
