@@ -122,20 +122,29 @@
                 s.parentNode.insertBefore(bp, s);
             })();
     </script>
-
+    
+    <!--QQ微信内置浏览器跳转-->
+    
+    <script type="text/javascript">
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger\/[0-9]/i) || ua.match(/MQQBrowser\/[0-9]/i) || ua.match(/QQ\/[0-9]/i)) {
+            window.location.href = 'https://zklcdc.gitee.io/urljump/URLJump.html?url=' + url;
+        }
+    </script>
+    
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <!-- 引入Live2D -->
 <link rel="stylesheet" type="text/css" href="https://xiao-gy-cdn.123yes.me/blog/theme/live2d/waifu.css" />
 
 <!-- 页脚图片样式设置 -->
-    <style>
-        #footerimg {
-                max-width:100%;
-                height:auto;
-                z-index:-1;
-        }
-    </style>
+<style>
+    #footerimg {
+        max-width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+</style>
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
@@ -432,14 +441,6 @@
     <!-- Footer -->
     <!-- Footer -->
 <footer>
-    <!--QQ微信内置浏览器跳转-->
-    <script type="text/javascript">
-        var ua = window.navigator.userAgent.toLowerCase();
-        if(ua.match(/MicroMessenger\/[0-9]/i) || ua.match(/MQQBrowser\/[0-9]/i) || ua.match(/QQ\/[0-9]/i)){
-            window.location.href = 'https://zklcdc.gitee.io/urljump/URLJump.html?url=' + url;
-        }
-    </script>
-
     <!--页脚图片选项-->
     
     <img id="footerimg" src="https://xiao-gy-cdn.123yes.me/blog/theme/footer.png" width=500% height=500% />
