@@ -122,14 +122,14 @@
                 s.parentNode.insertBefore(bp, s);
             })();
     </script>
-    
+
     <!--QQ微信内置浏览器跳转-->
     
     <script type="text/javascript">
-        var ua = window.navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger\/[0-9]/i) || ua.match(/MQQBrowser\/[0-9]/i) || ua.match(/QQ\/[0-9]/i)) {
-            window.location.href = 'https://zklcdc.gitee.io/urljump/URLJump.html?url=' + url;
-        }
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger\/[0-9]/i) || ua.match(/MQQBrowser\/[0-9]/i) || ua.match(/QQ\/[0-9]/i)){
+        window.location.href = "https://zklcdc.gitee.io/urljump/URLJump.html?url=" + window.location.href;
+    }
     </script>
     
 <meta name="generator" content="Hexo 4.2.0"></head>
