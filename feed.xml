@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://blog.xiao-gy.top/"/>
-  <updated>2020-04-04T10:41:12.610Z</updated>
+  <updated>2020-04-04T10:41:12.000Z</updated>
   <id>https://blog.xiao-gy.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.xiao-gy.top/2020/04/04/How-to-install-black-apple/"/>
     <id>https://blog.xiao-gy.top/2020/04/04/How-to-install-black-apple/</id>
     <published>2020-04-03T16:00:00.000Z</published>
-    <updated>2020-04-04T10:41:12.610Z</updated>
+    <updated>2020-04-04T10:41:12.000Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,7 @@
     <link href="https://blog.xiao-gy.top/2020/02/26/How-to-built-your-own-MC-Server/"/>
     <id>https://blog.xiao-gy.top/2020/02/26/How-to-built-your-own-MC-Server/</id>
     <published>2020-02-25T16:00:00.000Z</published>
-    <updated>2020-02-26T11:44:59.925Z</updated>
+    <updated>2020-02-26T11:45:00.000Z</updated>
     
     <summary type="html">
     
@@ -79,7 +79,7 @@
     <link href="https://blog.xiao-gy.top/2020/02/10/win10-arm-on-pi4/"/>
     <id>https://blog.xiao-gy.top/2020/02/10/win10-arm-on-pi4/</id>
     <published>2020-02-10T11:00:00.000Z</published>
-    <updated>2020-02-19T01:35:14.982Z</updated>
+    <updated>2020-02-19T01:35:14.000Z</updated>
     
     <summary type="html">
     
@@ -103,39 +103,11 @@
   </entry>
   
   <entry>
-    <title>Hello world!</title>
-    <link href="https://blog.xiao-gy.top/2020/02/07/Hello-world/"/>
-    <id>https://blog.xiao-gy.top/2020/02/07/Hello-world/</id>
-    <published>2020-02-06T16:00:00.000Z</published>
-    <updated>2020-02-07T05:24:29.312Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;留着这个坑等我看完Hello-world之后来填&quot;&gt;&lt;a href=&quot;#留着这个坑等我看完Hello-world之后来填&quot; class=&quot;headerlink&quot; title=&quot;留着这个坑等我看完Hello
-        
-      
-    
-    </summary>
-    
-      <category term="博客" scheme="https://blog.xiao-gy.top/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
-    
-      <category term="博客" scheme="https://blog.xiao-gy.top/NaN"/>
-    
-  </entry>
-  
-  <entry>
     <title>就我迷茫的学习生活作一总结</title>
     <link href="https://blog.xiao-gy.top/2020/02/07/Why-to-learn/"/>
     <id>https://blog.xiao-gy.top/2020/02/07/Why-to-learn/</id>
     <published>2020-02-06T16:00:00.000Z</published>
-    <updated>2020-02-07T08:14:54.651Z</updated>
+    <updated>2020-02-07T08:14:54.000Z</updated>
     
     <summary type="html">
     
@@ -159,11 +131,39 @@
   </entry>
   
   <entry>
+    <title>Hello world!</title>
+    <link href="https://blog.xiao-gy.top/2020/02/07/Hello-world/"/>
+    <id>https://blog.xiao-gy.top/2020/02/07/Hello-world/</id>
+    <published>2020-02-06T16:00:00.000Z</published>
+    <updated>2020-02-07T05:24:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;留着这个坑等我看完Hello-world之后来填&quot;&gt;&lt;a href=&quot;#留着这个坑等我看完Hello-world之后来填&quot; class=&quot;headerlink&quot; title=&quot;留着这个坑等我看完Hello
+        
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://blog.xiao-gy.top/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="https://blog.xiao-gy.top/NaN"/>
+    
+      <category term="日常" scheme="https://blog.xiao-gy.top/NaN"/>
+    
+  </entry>
+  
+  <entry>
     <title>福州行记</title>
     <link href="https://blog.xiao-gy.top/2020/01/24/Visiting-Fuzhou/"/>
     <id>https://blog.xiao-gy.top/2020/01/24/Visiting-Fuzhou/</id>
     <published>2020-01-23T16:00:00.000Z</published>
-    <updated>2020-01-24T13:23:57.437Z</updated>
+    <updated>2020-01-24T13:23:58.000Z</updated>
     
     <summary type="html">
     
@@ -189,7 +189,7 @@
     <link href="https://blog.xiao-gy.top/2019/08/24/About-this-new-blog/"/>
     <id>https://blog.xiao-gy.top/2019/08/24/About-this-new-blog/</id>
     <published>2019-08-24T07:38:00.000Z</published>
-    <updated>2020-02-04T11:22:54.047Z</updated>
+    <updated>2020-02-04T11:22:54.000Z</updated>
     
     <summary type="html">
     
@@ -217,7 +217,7 @@
     <link href="https://blog.xiao-gy.top/2019/08/11/How-and-why-to-make-a-blog/"/>
     <id>https://blog.xiao-gy.top/2019/08/11/How-and-why-to-make-a-blog/</id>
     <published>2019-08-10T16:00:00.000Z</published>
-    <updated>2019-09-07T10:11:07.865Z</updated>
+    <updated>2019-09-07T10:11:08.000Z</updated>
     
     <summary type="html">
     
@@ -245,7 +245,7 @@
     <link href="https://blog.xiao-gy.top/2019/07/13/Visiting-Jizhong/"/>
     <id>https://blog.xiao-gy.top/2019/07/13/Visiting-Jizhong/</id>
     <published>2019-07-13T12:57:17.000Z</published>
-    <updated>2020-02-04T11:22:54.069Z</updated>
+    <updated>2020-02-04T11:22:54.000Z</updated>
     
     <summary type="html">
     
@@ -273,7 +273,7 @@
     <link href="https://blog.xiao-gy.top/2019/05/25/How-to-FQ/"/>
     <id>https://blog.xiao-gy.top/2019/05/25/How-to-FQ/</id>
     <published>2019-05-24T16:00:00.000Z</published>
-    <updated>2020-02-07T02:53:50.951Z</updated>
+    <updated>2020-02-07T02:53:50.000Z</updated>
     
     <summary type="html">
     
@@ -299,7 +299,7 @@
     <link href="https://blog.xiao-gy.top/2019/05/08/Some-good-websides/"/>
     <id>https://blog.xiao-gy.top/2019/05/08/Some-good-websides/</id>
     <published>2019-05-07T16:00:00.000Z</published>
-    <updated>2019-08-02T13:18:26.074Z</updated>
+    <updated>2019-08-02T13:18:26.000Z</updated>
     
     <summary type="html">
     
